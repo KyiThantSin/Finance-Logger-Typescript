@@ -1,0 +1,89 @@
+body{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #ffff;
+  font-size: large;
+}
+.new-item-form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  
+                  .field {
+                    flex: 1;
+                    margin: 10px;
+                  }
+                  
+                  @media only screen and (max-width: 768px) {
+                    .new-item-form {
+                      flex-direction: column;
+                    }
+                  }
+h2{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+h1{
+                    margin: 40px auto;
+                    color: #ff0aa7;
+                    text-align: center;
+                  }
+                  ul{
+                    padding: 0;
+                    list-style-type: none;
+                  }
+                  li{
+                    padding: 6px 10px;
+                    border: 1px solid #eee;
+                    margin: 10px auto;
+                  }
+                  li h4{
+                    color: #ff0aa7;
+                    margin: 0;
+                    text-transform: capitalize;
+                  }
+                  li p{
+                    color: #333;
+                    margin: 8px 0 0;
+                  }
+                  footer{
+                    background: #eee;
+                    padding: 60px;
+                    margin-top: 60px;
+                  }
+                  form{
+                    max-width: 960px;
+                    margin: 0 auto;
+                    text-align: center;
+                  }
+                  label{
+                    display: block;
+                    font-weight: bold;
+                    font-size: 0.8em;
+                    color: #333;
+                    margin: 16px 0 6px;
+                  }
+                  input, select{
+                    padding: 6px;
+                    font-size:1rem;
+                    border: 1px solid #e1e1e1;
+                    border-radius: 4px;
+                  }
+                  button {
+                    color: white;
+                    border: 0;
+                    background: #ff0aa7;
+                    padding: 6px;
+                    height: 40px;
+                    margin-top: 40px;
+                    min-width: 80px;
+                    border-radius: 4px;
+                  }                  
+                  button:hover{
+                    cursor: pointer;
+                  }
+                  section{
+                    font-size:1.5rem;
+                  }
