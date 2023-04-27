@@ -3,6 +3,10 @@ body{
   background-color: #ffff;
   font-size: large;
 }
+.container{
+  background-color:whitesmoke;
+  padding: 30px;
+}
 .new-item-form {
                     display: flex;
                     flex-wrap: wrap;
@@ -69,7 +73,7 @@ h1{
                     padding: 6px;
                     font-size:1rem;
                     border: 1px solid #e1e1e1;
-                    border-radius: 4px;
+                    border-radius: 8px;
                   }
                   button {
                     color: white;
