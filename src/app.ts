@@ -1,3 +1,8 @@
+
+import {Invoice} from './classes/Invoice.js'
+const user = new Invoice('mario', 'work on the mario website', 250);
+console.log(user)
+
 const form = document.querySelector('#new-item-form')! as HTMLFormElement;
 //console.log(form)
 console.log("The code is running as expected!");
