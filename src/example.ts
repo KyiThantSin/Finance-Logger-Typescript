@@ -39,7 +39,7 @@ form.addEventListener('submit', (e: Event) => {
   );
 });
 
-/*interface example
+//interface example
 interface IsPerson{
   name : string,
   age : number,
@@ -55,4 +55,22 @@ const me : IsPerson = {
 const greetPerson = (name : IsPerson) =>{
   console.log(`Hello I am ${name.name}`)
 }
-greetPerson(me)*/
+greetPerson(me)
+
+// Generics
+const addUID = <T>(obj : T) => {
+  return {...obj, id: "23"}
+}
+let oneID = addUID({name:"Orange",color:"pink"})
+console.log(oneID)
+
+interface Colors<T>{
+  name: string,
+  data : T
+}
+
+const pinky : Colors<number> = {
+   name : 'pinky',
+   data : 2
+}
+console.log(pinky)

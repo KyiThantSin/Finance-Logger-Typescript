@@ -24,20 +24,25 @@ form.addEventListener('submit', (e) => {
     console.log("The form was submitted!");
     console.log(type.value, from.value, details.value, amount.valueAsNumber);
 });
-/*interface example
-interface IsPerson{
-  name : string,
-  age : number,
-  greet(name:string):string
-}
-const me : IsPerson = {
-  name: "Zuli",
-  age: 20,
-  greet(name: string):string{
-    return `Hello I am ${name}`
-  }
-}
-const greetPerson = (name : IsPerson) =>{
-  console.log(`Hello I am ${name.name}`)
-}
-greetPerson(me)*/ 
+const me = {
+    name: "Zuli",
+    age: 20,
+    greet(name) {
+        return `Hello I am ${name}`;
+    }
+};
+const greetPerson = (name) => {
+    console.log(`Hello I am ${name.name}`);
+};
+greetPerson(me);
+// Generics
+const addUID = (obj) => {
+    return Object.assign(Object.assign({}, obj), { id: "23" });
+};
+let oneID = addUID({ name: "Orange", color: "pink" });
+console.log(oneID);
+const pinky = {
+    name: 'pinky',
+    data: 2
+};
+console.log(pinky);
