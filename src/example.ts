@@ -66,11 +66,27 @@ console.log(oneID)
 
 interface Colors<T>{
   name: string,
-  data : T
+  data : T,
+  item : number
 }
+
+// enums
+enum itemType { Book , Car , Flower , Pen}
 
 const pinky : Colors<number> = {
    name : 'pinky',
-   data : 2
+   data : 2,
+   item : itemType.Flower //will show index
 }
 console.log(pinky)
+
+const green : Colors<string> = {
+   name : 'green',
+   data : 'sold out',
+   item : itemType.Pen
+}
+console.log(green)
+
+//tuples , the index one must be number
+let tups : [string, number , boolean] = ['name', 23, false]
+console.log(tups)

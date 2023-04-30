@@ -41,8 +41,26 @@ const addUID = (obj) => {
 };
 let oneID = addUID({ name: "Orange", color: "pink" });
 console.log(oneID);
+// enums
+var itemType;
+(function (itemType) {
+    itemType[itemType["Book"] = 0] = "Book";
+    itemType[itemType["Car"] = 1] = "Car";
+    itemType[itemType["Flower"] = 2] = "Flower";
+    itemType[itemType["Pen"] = 3] = "Pen";
+})(itemType || (itemType = {}));
 const pinky = {
     name: 'pinky',
-    data: 2
+    data: 2,
+    item: itemType.Flower //will show index
 };
 console.log(pinky);
+const green = {
+    name: 'green',
+    data: 'sold out',
+    item: itemType.Pen
+};
+console.log(green);
+//tuples , the index one must be number
+let tups = ['name', 23, false];
+console.log(tups);

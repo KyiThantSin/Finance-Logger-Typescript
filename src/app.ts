@@ -19,17 +19,23 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 
 form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
+
+//  tuples
+  let values : [string, string, number];
+  values = [from.value, details.value , amount.valueAsNumber];
+
   let allData: HasFormatter;
-  if(type.value === 'invoice'){
-    allData = new Invoice(from.value, details.value , amount.valueAsNumber);
-  }else{
-    allData = new Payment(from.value, details.value , amount.valueAsNumber)
+  if(from.value && details.value && amount.valueAsNumber){
+    if(type.value === 'invoice'){
+      allData = new Invoice(...values);
+    }else{
+      allData = new Payment(...values)
+    }
+    console.log("The form was submitted!");
+    console.log("all-data",allData);
+  
+    lists.render(allData, type.value, 'end' )
   }
-  console.log("The form was submitted!");
-  console.log("all-data",allData);
-
-  lists.render(allData, type.value, 'end' )
-
    // Refresh the "from" input box
    from.value = "";
    details.value = "";
